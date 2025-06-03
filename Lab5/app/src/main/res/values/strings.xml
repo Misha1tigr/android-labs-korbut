@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tilt-o-meter</string>
+    <string name="raw_tilt">Сирі дані: --°</string>
+    <string name="smoothed_tilt">Згладжені дані: --°</string>
+    <string name="calibrate">Калібрувати</string>
+    <string name="current_angle">Поточний кут: --°</string>
+</resources>

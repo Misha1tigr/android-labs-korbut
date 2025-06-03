@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Сирі дані -->
+    <TextView
+        android:id="@+id/rawTiltText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/raw_tilt" />
+
+    <!-- Згладжені дані -->
+    <TextView
+        android:id="@+id/smoothedTiltText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_below="@id/rawTiltText"
+        android:layout_centerHorizontal="true"
+        android:text="@string/smoothed_tilt" />
+
+
+    <!-- Кнопка калібрування -->
+    <Button
+        android:id="@+id/calibrateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calibrate"
+        android:layout_below="@id/smoothedTiltText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black" />
+
+    <!-- Нерухома шкала -->
+    <ImageView
+        android:id="@+id/scaleImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/scale"
+        android:layout_centerInParent="true" />
+
+    <!-- Стрілка рівня -->
+    <ImageView
+        android:id="@+id/arrowImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/arrow"
+        android:layout_centerInParent="true" />
+
+    <!-- Поточний кут нахилу з кольоровим індикатором -->
+    <TextView
+        android:id="@+id/correctedTiltText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_angle"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_below="@id/scaleImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
