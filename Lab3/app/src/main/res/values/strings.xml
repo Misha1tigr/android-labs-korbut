@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Вибір Страви</string>
+    <string name="dish_prompt">Оберіть страву</string>
+    <string name="title">Вибір страви</string>
+    <string name="manufacturer_label">Виробник:</string>
+    <string name="manufacturer1">Смакодар</string>
+    <string name="manufacturer2">ЕкоХарчі</string>
+    <string name="manufacturer3">ДоброЇж</string>
+    <string name="manufacturer4">НатурФуд</string>
+    <string name="price_label">Ціновий діапазон:</string>
+    <string name="min_price">Мін. ₴</string>
+    <string name="max_price">Макс. ₴</string>
+    <string name="ok_button">ОК</string>
+    <string name="error_title">Неповні дані</string>
+    <string name="error_no_dish">Будь ласка, оберіть страву.</string>
+    <string name="error_no_manufacturer">Будь ласка, оберіть хоча б одного виробника.</string>
+    <string name="error_price_range">Мінімальна ціна не може бути більшою за максимальну.</string>
+    <string name="cancel_button">Очистити</string>
+    <string name="back">Назад</string>
+    <string name="history">Історія вибору страв</string>
+</resources>
