@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Сирі дані -->
+    <TextView
+        android:id="@+id/rawTiltText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Сирий нахил: --°" />
+
+    <!-- Згладжені дані -->
+    <TextView
+        android:id="@+id/smoothedTiltText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_below="@id/rawTiltText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Згладжений нахил: --°" />
+
+    <!-- Сирі дані PS -->
+    <TextView
+        android:id="@+id/rawGpsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_below="@id/smoothedTiltText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="GPS: Ініціалізація..."
+        android:fontFamily="monospace" />
+
+    <!-- Кнопка калібрування -->
+    <Button
+        android:id="@+id/calibrateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Калібрувати"
+        android:layout_below="@id/rawGpsText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black" />
+
+    <!-- Нерухома шкала -->
+    <ImageView
+        android:id="@+id/scaleImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/scale"
+        android:layout_below="@id/calibrateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Стрілка рівня -->
+    <ImageView
+        android:id="@+id/arrowImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/arrow"
+        android:layout_alignTop="@id/scaleImage"
+        android:layout_alignBottom="@id/scaleImage"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Поточний кут нахилу з кольоровим індикатором -->
+    <TextView
+        android:id="@+id/correctedTiltText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Поточний кут: --°"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/scaleImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- Спідометр -->
+    <ImageView
+        android:id="@+id/speedScaleImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/scale_speed"
+        android:layout_below="@id/correctedTiltText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Стрілка швидкості -->
+
+    <!-- Швидкість -->
+
+    <ImageView
+        android:id="@+id/speedArrowImage"
+        android:layout_width="168dp"
+        android:layout_height="221dp"
+        android:layout_alignTop="@id/speedScaleImage"
+        android:layout_alignBottom="@id/speedScaleImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="-66dp"
+        android:rotation="00"
+        android:src="@drawable/arrow_speed" />
+
+    <TextView
+        android:id="@+id/speedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 км/г"
+        android:textColor="#00ff00"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_below="@id/speedScaleImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="monospace" />
+
+</RelativeLayout>
